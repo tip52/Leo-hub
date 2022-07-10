@@ -1,4 +1,6 @@
 local CoreGui = game:GetService("StarterGui")
+if setclipboard then
+
 	CoreGui:SetCore("SendNotification", {
 		Title = "Oudated script",
 		Text = "New script copied to clipboard",
@@ -6,3 +8,17 @@ local CoreGui = game:GetService("StarterGui")
 	})
   
   setclipboard('loadstring(game:HttpGet("https://raw.githubusercontent.com/tip52/Leo-hub/main/loader.lua"))()')
+  
+  else
+      CoreGui:SetCore("SendNotification", {
+		Title = "You don't have setclipboard",
+		Text = 'Your executer does not support it',
+		Duration = 10
+	})
+	
+	  CoreGui:SetCore("SendNotification", {
+		Title = "New Script:",
+		Text = 'loadstring(game:HttpGet("https://raw.githubusercontent.com/tip52/Leo-hub/main/loader.lua',
+		Duration = 10
+	})
+	end

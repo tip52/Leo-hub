@@ -800,7 +800,7 @@ function Library:create(options)
 
     if game.PlaceId == 13822889 then
 
-        FerryTime = profile:object("TextLabel", {
+        local FerryTime = profile:object("TextLabel", {
             BackgroundTransparency = 1,
             Position = UDim2.new(0, 105, 1, -10),
             Size = UDim2.new(0, 410,0, 20),
@@ -811,7 +811,7 @@ function Library:create(options)
             Text = "Ferry Departure: " .. tostring(game:GetService("Workspace").Ferry.TimeToDeparture.Value) .. " Seconds"
             task.spawn(function()
                 while task.wait() do
-                    FerryTime.Text = "Ferry Departure: " .. tostring(game:GetService("Workspace").Ferry.TimeToDeparture.Value) .. " Seconds"
+                    Text = "Ferry Departure: " .. tostring(game:GetService("Workspace").Ferry.TimeToDeparture.Value) .. " Seconds"
                 end
             end)
         })

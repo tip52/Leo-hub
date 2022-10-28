@@ -808,7 +808,12 @@ function Library:create(options)
             Theme = {TextColor3 = {"WeakText", -20}},
             TextScaled = true,
             TextXAlignment = Enum.TextXAlignment.Left,
+
+            task.spawn(function()
+                while task.wait() do
             Text = "Ferry Departure: " .. game:GetService("Workspace").Ferry.TimeToDeparture.Value .. " Seconds"
+                end
+            end)
         })
 
 end

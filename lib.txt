@@ -811,7 +811,7 @@ function Library:create(options)
             Text = "Ferry Departure: " .. game:GetService("Workspace").Ferry.TimeToDeparture.Value .. " Seconds"
             task.spawn(function()
                 while task.wait() do
-                    FerryTime.Text = "Ferry Departure: " .. game:GetService("Workspace").Ferry.TimeToDeparture.Value .. " Seconds"
+                    FerryTime.Text = "Ferry Departure: " .. tostring(game:GetService("Workspace").Ferry.TimeToDeparture.Value) .. " Seconds"
                 end
             end)
         })
